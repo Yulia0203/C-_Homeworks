@@ -3,17 +3,23 @@
 //12821 -> да
 //23432 -> да
 
-Console.WriteLine("Введите пятизначное число:");
-string str = Console.ReadLine();
-int a = 0;
-for (int i = 0; i < str.Length / 2; i++)
+internal class Program
 {
-    if (str.Substring(i, 1) != (str.Substring(str.Length - 1 - i, 1)))
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Введите пятизначное число:");
+        string str = Console.ReadLine();
+        int a = 0;
+        for (int i = 0; i < str.Length / 2; i++)
         {
-            Console.WriteLine("Число {0} не является палиндромом", str);
-            break;
+            if (str.Substring(i, 1) != str.Substring(str.Length - 1 - i, 1))
+            {
+                Console.WriteLine("Число {0} не является палиндромом", str);
+                break;
+            }
+            else
+                a = 1;
         }
-    else
-    a = 1;
+        if (a == 1) Console.WriteLine("Число {0} является палиндромом", str);
+    }
 }
-if (a == 1) Console.WriteLine("Число {0} является палиндромом", str);
