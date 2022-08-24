@@ -4,7 +4,19 @@
 
 
     Console.WriteLine("Введите число N");
-    int n = int.Parse(Console.ReadLine());
-    for (int i = 1; i <= n; i++)
-    Console.WriteLine("{0}^{0}^{0} = {2}", i, i*i, i*i*i);
 
+static void NewMethod(int n)
+{
+    for (int i = 1; i <= n; i++)
+        Console.WriteLine("{0}^{0}^{0} = {2}", i, i * i, i * i * i);
+}
+
+int n = int.Parse(Console.ReadLine());
+
+NewMethod(n);
+
+
+//  Console.WriteLine("Введите число N");
+//     int n = int.Parse(Console.ReadLine());
+//     for (int i = 1; i <= n; i++)
+//     Console.WriteLine("{0}^{0}^{0} = {2}", i, i*i, i*i*i);
